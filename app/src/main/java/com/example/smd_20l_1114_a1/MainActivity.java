@@ -2,6 +2,7 @@ package com.example.smd_20l_1114_a1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,8 +43,17 @@ public class MainActivity extends AppCompatActivity {
 
                 if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || rgGender.getCheckedRadioButtonId() == -1) {
                     Toast.makeText(MainActivity.this, "Please fill all fields!", Toast.LENGTH_SHORT).show();
+                } else if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+                    Toast.makeText(MainActivity.this, "Please enter a valid email address!", Toast.LENGTH_SHORT).show();
+                } else if (!password.equals(confirmPassword)) {
+                    Toast.makeText(MainActivity.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra("name",name);
+                    intent.putExtra("username",username);
+                    intent.putExtra("email",email);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
