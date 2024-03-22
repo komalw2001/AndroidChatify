@@ -3,9 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/coral"
+        android:padding="10dp"
+        >
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:id="@+id/ivArrow"
+            >
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chatify_home"
+            android:textSize="27sp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            ></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/coral"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home"
+            android:drawableLeft="@drawable/call_icon"
+            android:backgroundTint="@color/coral"
+            android:textSize="17sp"
+            android:id="@+id/btnHome"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/profile"
+            android:drawableLeft="@drawable/person_icon"
+            android:backgroundTint="@color/coral"
+            android:textSize="17sp"
+            android:id="@+id/btnProfile"
+            />
+
+
+    </LinearLayout>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragHome"
+        tools:layout="@layout/fragment_chat"
+        android:name="com.example.smd_20l_1114_a1.ChatFragment"
+        >
+    </fragment>
 
 </LinearLayout>
