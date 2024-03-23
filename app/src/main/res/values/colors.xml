@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="coral">#FE5757</color>
     <color name="gray">#CDCDCD</color>
+    <color name="border_coral">#E8AE9F</color>
+    <color name="light_coral">#FFEDE1</color>
 </resources>

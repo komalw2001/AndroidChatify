@@ -3,6 +3,7 @@ package com.example.smd_20l_1114_a1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,17 +42,30 @@ public class MainActivity extends AppCompatActivity {
                 String password = etPassword.getText().toString().trim();
                 String confirmPassword = etConfirmPassword.getText().toString().trim();
 
-                if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || rgGender.getCheckedRadioButtonId() == -1) {
+                int selectedRadioButtonId = rgGender.getCheckedRadioButtonId();
+
+                if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || selectedRadioButtonId == -1) {
                     Toast.makeText(MainActivity.this, "Please fill all fields!", Toast.LENGTH_SHORT).show();
                 } else if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
                     Toast.makeText(MainActivity.this, "Please enter a valid email address!", Toast.LENGTH_SHORT).show();
                 } else if (!password.equals(confirmPassword)) {
                     Toast.makeText(MainActivity.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
                 } else {
+
+                    RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+                    String gender = selectedRadioButton.getText().toString();
+
+                    SharedPreferences sPref = getSharedPreferences("Signup", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sPref.edit();
+
+                    editor.putString("name", name);
+                    editor.putString("username", username);
+                    editor.putString("email", email);
+                    editor.putString("gender", gender);
+                    editor.apply();
+
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    intent.putExtra("name",name);
-                    intent.putExtra("username",username);
-                    intent.putExtra("email",email);
+
                     startActivity(intent);
                     finish();
                 }

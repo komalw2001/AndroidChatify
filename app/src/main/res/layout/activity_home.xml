@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/coral"
-        android:padding="10dp"
+        android:padding="@dimen/small_margin"
         >
 
         <ImageView
@@ -27,8 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/chatify_home"
-            android:textSize="27sp"
-            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/top_title_size"
+            android:layout_marginLeft="@dimen/medium_margin"
             android:textColor="@color/white"
             ></TextView>
 
@@ -42,24 +42,24 @@
         >
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/home"
             android:drawableLeft="@drawable/call_icon"
             android:backgroundTint="@color/coral"
-            android:textSize="17sp"
+            android:textSize="@dimen/tab_textsize"
             android:id="@+id/btnHome"
             />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/profile"
             android:drawableLeft="@drawable/person_icon"
             android:backgroundTint="@color/coral"
-            android:textSize="17sp"
+            android:textSize="@dimen/tab_textsize"
             android:id="@+id/btnProfile"
             />
 
@@ -72,6 +72,15 @@
         android:id="@+id/fragHome"
         tools:layout="@layout/fragment_chat"
         android:name="com.example.smd_20l_1114_a1.ChatFragment"
+        >
+    </fragment>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragProfile"
+        tools:layout="@layout/fragment_profile"
+        android:name="com.example.smd_20l_1114_a1.ProfileFragment"
         >
     </fragment>
 
