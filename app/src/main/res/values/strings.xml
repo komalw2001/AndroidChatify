@@ -9,4 +9,19 @@
     <string name="email">Email</string>
     <string name="username">Username</string>
     <string name="name">Name</string>
+    <string name="chatify_home">Chatify Home</string>
+    <string name="home">HOME</string>
+    <string name="profile">PROFILE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username_lcase">username</string>
+    <string name="post_count">1243</string>
+    <string name="posts">posts</string>
+    <string name="follower_count">5678</string>
+    <string name="followers">followers</string>
+    <string name="following_count">9000</string>
+    <string name="following">following</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="bio">Hello this is my bio!\nI like cats!\nThis is my bio!</string>
+    <string name="full_name">Full Name</string>
 </resources>

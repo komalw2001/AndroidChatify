@@ -13,20 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:layout_margin="30dp"
-        app:cardCornerRadius="35dp"
-        app:cardElevation="8dp">
+        android:layout_margin="@dimen/signup_cardview_margin"
+        app:cardCornerRadius="@dimen/signup_cardview_radius"
+        app:cardElevation="@dimen/signup_cardview_elevation">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/medium_margin"
             android:gravity="center">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="@dimen/logo_height"
                 android:src="@drawable/chatify"/>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -37,12 +37,12 @@
                 app:boxBackgroundMode="filled"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@color/coral"
-                android:layout_marginTop="40dp">
+                android:layout_marginTop="@dimen/large_top_margin">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/etName"
                     android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -56,12 +56,12 @@
                 app:boxBackgroundMode="filled"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@color/coral"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/small_margin">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/etUsername"
                     android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -75,13 +75,13 @@
                 app:boxBackgroundMode="filled"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@color/coral"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/small_margin">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/etEmail"
                     android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,13 +95,13 @@
                 app:boxBackgroundMode="filled"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@color/coral"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/small_margin">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/etPassword"
                     android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -115,14 +115,14 @@
                 app:boxBackgroundColor="@color/white"
                 android:hint="@string/retype_password"
                 app:boxStrokeColor="@color/coral"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/small_margin"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/etConfirmPassword"
                     android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -132,25 +132,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/small_margin"
                 >
 
                 <RadioButton
                     android:id="@+id/rbMale"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zero"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/radiobtn_textsize"
                     android:text="@string/male"
                     app:buttonTint="@color/black"/>
 
                 <RadioButton
                     android:id="@+id/rbFemale"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zero"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="18sp"
+                    android:layout_marginLeft="@dimen/radiobtn_margin"
+                    android:textSize="@dimen/radiobtn_textsize"
                     android:text="@string/female"
                     app:buttonTint="@color/black"/>
 
@@ -160,29 +160,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="@dimen/large_top_margin"
                 android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin">
 
                 <Button
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/btn_height"
                     android:layout_weight="1"
                     android:text="@string/exit"
                     android:backgroundTint="@color/gray"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/btnExit" />
 
                 <Button
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/btn_height"
                     android:layout_weight="2"
                     android:text="@string/sign_up"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/small_margin"
                     android:backgroundTint="@color/coral"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/normal_text_size"
                     android:id="@+id/btnSignup" />
 
             </LinearLayout>
