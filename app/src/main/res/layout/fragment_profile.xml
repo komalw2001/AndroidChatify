@@ -319,4 +319,53 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_coral"
+        >
+        <ImageView
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/small_margin"
+            ></ImageView>
+        <ImageView
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/small_margin"
+            ></ImageView>
+        <ImageView
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera_icon"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/small_margin"
+            ></ImageView>
+        <ImageView
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heart_icon"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/small_margin"
+            ></ImageView>
+        <ImageView
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_icon"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/small_margin"
+            ></ImageView>
+
+    </LinearLayout></RelativeLayout>
+
 </LinearLayout>

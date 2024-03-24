@@ -41,27 +41,46 @@
         android:background="@color/coral"
         >
 
-        <Button
+        <LinearLayout
             android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/home"
-            android:drawableLeft="@drawable/call_icon"
-            android:backgroundTint="@color/coral"
-            android:textSize="@dimen/tab_textsize"
-            android:id="@+id/btnHome"
-            />
-
-        <Button
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:drawableLeft="@drawable/call_icon"
+                android:backgroundTint="@color/coral"
+                android:textSize="@dimen/tab_textsize"
+                android:id="@+id/btnHome"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_border"
+                android:background="@color/tab_border"
+                android:id="@+id/viewHomeBorder"></View>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
             android:text="@string/profile"
             android:drawableLeft="@drawable/person_icon"
             android:backgroundTint="@color/coral"
             android:textSize="@dimen/tab_textsize"
             android:id="@+id/btnProfile"
             />
+            <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_border"
+            android:background="@color/coral"
+            android:id="@+id/viewProfileBorder"></View>
+        </LinearLayout>
 
 
     </LinearLayout>
