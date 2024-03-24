@@ -1,6 +1,7 @@
 package com.example.smd_20l_1114_a1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -21,6 +22,8 @@ public class HomeActivity extends AppCompatActivity {
 
     Fragment fragHome, fragProfile;
 
+    private View viewHomeBorder, viewProfileBorder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,9 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        int coralColor = ContextCompat.getColor(this, R.color.coral);
+        int selectedColor = ContextCompat.getColor(this, R.color.tab_border);
+
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +50,9 @@ public class HomeActivity extends AppCompatActivity {
                         .show(fragHome)
                         .hide(fragProfile)
                         .commit();
+
+                viewHomeBorder.setBackgroundColor(selectedColor);
+                viewProfileBorder.setBackgroundColor(coralColor);
             }
         });
 
@@ -54,6 +63,9 @@ public class HomeActivity extends AppCompatActivity {
                         .show(fragProfile)
                         .hide(fragHome)
                         .commit();
+
+                viewProfileBorder.setBackgroundColor(selectedColor);
+                viewHomeBorder.setBackgroundColor(coralColor);
             }
         });
 
@@ -74,5 +86,7 @@ public class HomeActivity extends AppCompatActivity {
         btnProfile = findViewById(R.id.btnProfile);
         fragHome = manager.findFragmentById(R.id.fragHome);
         fragProfile = manager.findFragmentById(R.id.fragProfile);
+        viewHomeBorder = findViewById(R.id.viewHomeBorder);
+        viewProfileBorder = findViewById(R.id.viewProfileBorder);
     }
 }

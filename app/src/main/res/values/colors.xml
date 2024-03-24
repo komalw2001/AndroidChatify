@@ -6,4 +6,5 @@
     <color name="gray">#CDCDCD</color>
     <color name="border_coral">#E8AE9F</color>
     <color name="light_coral">#FFEDE1</color>
+    <color name="tab_border">#D14D41</color>
 </resources>
